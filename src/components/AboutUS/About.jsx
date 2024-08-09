@@ -4,7 +4,7 @@ import './About.css'
 
 const About = () => {
   return (
-    <section id='about-sec'>
+    <section id='about-sec h-[100rem]'>
       <div className='sec-heading'>
         <h1>Let's Know Everything About Us</h1>
       </div>
@@ -71,3 +71,5 @@ const About = () => {
 }
 
 export default About
+
+
