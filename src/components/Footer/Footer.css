@@ -1,0 +1,57 @@
+
+footer {
+    position: relative;
+    top: 6rem;
+    height: 700px;
+}
+
+.frame138 {
+    width: 80rem;
+    height: 30rem;
+    text-align: start;
+    position: relative;
+    top: 4rem;
+}
+
+.frame138a p {
+    width: 18rem;
+    text-align: start;
+}
+
+.frame138b h3 {
+    font-size: 1.5rem;
+}
+
+.frame138b ul {
+    line-height: 3rem;
+    position: relative;
+    font-family: 'Roboto Serif', serif;
+
+    top: 2rem;
+}
+.frame138c{
+    position: relative;
+    left: 5rem;
+     
+}
+.frame138c h3{
+    font-family: 'Roboto Serif', serif;
+font-size: 1.5rem;
+text-align: start;
+position: relative;
+}
+.frame138 button{
+    position: relative;
+    right: 7.5rem;
+    border-radius: 23px ;
+    width: 8rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.straightline{
+    width: 80rem;
+    font-family: 'Roboto Serif', serif;
+
+}
