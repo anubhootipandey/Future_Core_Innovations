@@ -165,7 +165,7 @@ const Service = () => {
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                     {keyFactors.map((factor, index) => (
                         <div key={index}>
-                            <FontAwesomeIcon className='w-6 relative left-3 top-8 h-6 text-blue-950' icon={factor.icon} />
+                            <FontAwesomeIcon className='w-6 relative left top-8 h-6 text-blue-950' icon={factor.icon} />
                             <h3 className='text-2xl relative left-14 font-semibold'>{factor.title}</h3>
                             <p className='text-gray-700 text-start w-[17rem]'>{factor.description}</p>
                         </div>
