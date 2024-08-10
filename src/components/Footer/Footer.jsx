@@ -45,7 +45,7 @@ function Footer() {
             <h4 className='text-xs mb-4'>Newsletter</h4>
             <p>Signup our newsletter to get update information, news or insight</p>
             <div className="new-in mt-4">
-              <input type="text" placeholder="Enter your email" className="w-full mb-4 p-2 rounded" />
+              <input type="text" placeholder="Enter your email" className="w-full mb-4 p-2 rounded text-black" />
               <button className="bg-[#00e89c] text-black p-2 rounded w-full">Sign Up</button>
             </div>
           </div>

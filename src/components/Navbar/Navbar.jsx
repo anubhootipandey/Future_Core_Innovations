@@ -14,7 +14,7 @@ const Navbar = () => {
             </div>
             <ul className='flex gap-12 m-6'>
                 <Link to="/about" className='text-gray-600 hover:text-red-500'>About us</Link>
-                <Link className='text-gray-600 hover:text-red-500'>Services</Link>
+                <Link to="/service" className='text-gray-600 hover:text-red-500'>Services</Link>
                 <Link className='text-gray-600 hover:text-red-500'>Feature</Link>
                 <Link className='text-gray-600 hover:text-red-500'>Blog</Link>
                 <Link className='text-gray-600 hover:text-red-500'>Careers</Link>
