@@ -84,7 +84,7 @@ const FeaturePart = ({ title, description, benefits, imgSrc, imgAlt, reverse }) 
             </ul>
         </div>
         <div className="feature-right w-full lg:w-1/2 flex items-center justify-center">
-            <img src={imgSrc} alt={imgAlt} className="transform scale-90 hover:scale-100 transition-transform duration-300" />
+            <img src={imgSrc} alt={imgAlt} className="w-full h-auto max-w-sm transform scale-90 hover:scale-100 transition-transform duration-300" />
         </div>
     </div>
 );
@@ -131,29 +131,29 @@ const Features = () => {
                 </div>
             </div>
 
-            {/* Subscribe Section */}
-            <div className='mt-[4rem] w-[73rem] relative left-[5rem] h-[26rem] top-20 p-8 rounded-lg flex flex-col'>
-                <h1 className='text-5xl font-bold mb-4'>Subscribe to our newsletter</h1>
-                <p className='text-gray-600 mb-6'>
-                    Subscribe to our newsletter and get exclusive deals you won't find anywhere else straight to your inbox.
-                </p>
-                <form className='w-[28rem] flex flex-col items-start'>
-                    <input
-                        type="email"
-                        placeholder="Enter Your Email Address"
-                        className='w-full max-w-md p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-950'
-                    />
-                    <button
-                        type="submit"
-                        className='bg-blue-950 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none'
-                    >
-                        Subscribe Now
-                    </button>
-                </form>
-                <div className='absolute top-[.5rem] left-[50rem]'>
-                    <img className='w-[25rem] h-[25rem]' src={newsletter} alt="" />
-                </div>
-            </div>
+           {/* Subscribe Section */}
+<div className='mt-8 mx-auto max-w-4xl p-8 rounded-lg flex flex-col relative'>
+    <h1 className='text-5xl font-bold mb-4'>Subscribe to our newsletter</h1>
+    <p className='text-gray-600 mb-6'>
+        Subscribe to our newsletter and get exclusive deals you won't find anywhere else straight to your inbox.
+    </p>
+    <form className='w-full flex flex-col items-start mb-6'>
+        <input
+            type="email"
+            placeholder="Enter Your Email Address"
+            className='w-full max-w-md p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-950'
+        />
+        <button
+            type="submit"
+            className='bg-blue-950 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none'
+        >
+            Subscribe Now
+        </button>
+    </form>
+    <div className='mt-4 flex justify-center'>
+        <img className='w-[25rem] h-auto' src={newsletter} alt="Subscribe Image" />
+    </div>
+</div>
         </>
     );
 };
