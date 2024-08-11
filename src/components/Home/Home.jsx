@@ -13,6 +13,7 @@ import featureIcon1 from "../media/features-icon-1.png";
 import featureIcon2 from "../media/features-icon-2.png";
 import featureIcon3 from "../media/features-icon-3.png";
 import faqImg from "../media/faq.png";
+import "./Home.css";
 
 const Home = () => {
 
@@ -98,13 +99,13 @@ const Home = () => {
       ];
 
   return (
-    <>
+    <div className="bg-gray-100">
 <div id="main" className="bg-center bg-cover bg-gradient-to-b from-[#061443] to-[#171717]/90">
   <div id="hero" className="flex flex-row justify-around items-center h-[840px] mx-auto max-w-[1100px]">
-    <div className="content p-5 lg:p-10">
+    <div className="content md:order-1 p-5 lg:p-10">
       <h6 className="text-gray-300 mb-1">Future Core Innovations.</h6>
       <h1 className="text-white text-4xl font-bold mb-10">Innovating <br /> Tomorrow, Today</h1>
-      <p className="text-gray-300 text-sm font-medium mb-8">
+      <p className="text-gray-300 text-sm w-[500px] mr-[6rem] font-medium mb-8">
         At Future Core Innovations, we specialize in delivering state-of-the-art web development, app development, and comprehensive IT services. Our expert team is dedicated to transforming your vision into reality.
       </p>
       <div>
@@ -118,34 +119,34 @@ const Home = () => {
         </button>
       </div>
     </div>
-    <div className="box-con flex flex-wrap justify-evenly items-center">
-      <div className="box-con-inner bg-white w-[250px] p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
-        <div className="flex space-x-2">
-          <FontAwesomeIcon icon={faCircle} className="text-red-500 text-2xl" />
-          <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-2xl" />
-          <FontAwesomeIcon icon={faCircle} className="text-green-400 text-2xl" />
+    <div className="box-con flex flex-wrap md:order-2 justify-evenly items-center">
+      <div className="box-con-inner ml-[-180px] mt-[200px] bg-white w-[170px] p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+        <div className="flex space-x-1">
+          <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
+          <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
+          <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
         </div>
         <div>
           <h4 className="text-xl font-bold mt-2 mb-1">Android Apps Development</h4>
           <p className="text-sm">"At first, the purpose of Android was thought of as a mobile OS."</p>
         </div>
       </div>
-      <div className="box-con-inner bg-white p-5 w-[250px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
-        <div className="flex space-x-2">
-          <FontAwesomeIcon icon={faCircle} className="text-red-500 text-2xl" />
-          <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-2xl" />
-          <FontAwesomeIcon icon={faCircle} className="text-green-400 text-2xl" />
+      <div className="box-con-inner bg-white p-5 ml-[-65px] w-[250px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+        <div className="flex space-x-1">
+          <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
+          <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
+          <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
         </div>
         <div>
           <h4 className="text-xl font-bold mt-2 mb-1">Cyber Security Services</h4>
           <p className="text-sm">"Blocking malware and spam, vulnerability scanning, intrusion detection, firewalls,"</p>
         </div>
       </div>
-      <div className="box-con-inner bg-white p-5 w-[250px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
-        <div className="flex space-x-2">
-          <FontAwesomeIcon icon={faCircle} className="text-red-500 text-2xl" />
-          <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-2xl" />
-          <FontAwesomeIcon icon={faCircle} className="text-green-400 text-2xl" />
+      <div className="box-con-inner bg-white mt-[-60px]  p-5 w-[250px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+        <div className="flex space-x-1">
+          <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
+          <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
+          <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
         </div>
         <div>
           <h4 className="text-xl font-bold mt-2 mb-1">Design & Development</h4>
@@ -271,7 +272,7 @@ const Home = () => {
       <i className="fa-solid fa-chevron-right bg-white p-[10px_14px] rounded-[20px] transition-all duration-300 mx-[10px_3px] cursor-pointer hover:bg-[#1d3557] hover:text-white"></i>
     </div>
   </div>
-  <div className="my-[90px] mx-auto">
+  <div className="my-[90px] flex flex-wrap mx-auto">
     {[
       {
         title: 'Cloud Databases',
@@ -285,8 +286,14 @@ const Home = () => {
         description: 'Website hosting provides the infrastructure and resources needed to make websites accessible online. It ensures fast load times, reliable uptime and allowing businesses to maintain a strong online presence and deliver a seamless user experience.',
         imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
       },
+      {
+        title: 'IT Consulting',
+        tags: ['ERP', 'CRM', 'Data Analytics'],
+        description: 'We partner closely with our clients to assess their current IT infrastructure, identify opportunities for improvement, and develop customized solutions that drive efficiency and innovation. ',
+        imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+      },
     ].map((service, index) => (
-      <div className="bg-white m-[10px] p-[20px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-200 hover:translate-y-[10px]" key={index}>
+      <div className="bg-white m-[10px] p-[20px] w-[300px] h-[370px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-200 hover:translate-y-[10px]" key={index}>
         <h4 className="text-[1.2rem] font-semibold">{service.title}</h4>
         <div className="flex flex-row">
           {service.tags.map((tag, i) => (
@@ -330,9 +337,9 @@ const Home = () => {
 </div>
 
 {/* review section */}
-<div className="py-[50px] my-[40px] bg-[linear-gradient(#1F3170,_rgba(31,_31,_31,_0.89))_center,_url('media/review-bg.jpg')_center]">
+<div className="review-section py-[50px] my-[40px]">
   <div className="max-w-[1140px] max-h-[400px] h-[400px] mx-auto my-[20px] p-[20px] text-center">
-    <h1 className="text-white text-[3rem] my-[10px] font-bold bg-[url('media/bbblurry.svg')] bg-center bg-no-repeat bg-contain">
+    <h1 className="text-white text-[3rem] my-[10px] font-bold">
       What Our Client Says
     </h1>
     <div className="r-slider container">
@@ -350,11 +357,11 @@ const Home = () => {
 </div>
 
 {/* blog section */}
-<div id="blog" className="bg-[#f7f7f7] py-[50px] px-[20px]">
+<div id="blog" className="bg-[#f7f7f7] py-[50px] mt-[240px] px-[20px]">
   <div className="max-w-[1140px] mx-auto my-[20px]">
     <div className="text-center mb-[40px]">
-      <p className="text-[#585555] font-semibold mb-[5px]">Latest News</p>
-      <h1 className="font-bold text-[#585555] mb-[30px] text-[20px] transition-all duration-200">
+      <p className="text-[#585555] font-semibold text-[20px] mb-[5px]">Latest News</p>
+      <h1 className="font-bold text-[#585555] mb-[30px] text-[40px] transition-all duration-200">
         Our latest articles & <br /> resources
       </h1>
     </div>
@@ -401,13 +408,13 @@ const Home = () => {
           {faqData.map((faq, index) => (
             <div key={index} className="my-[15px] border-none rounded-[10px]">
               <button
-                className={`accordion-button rounded-[10px] ${openIndex === index ? 'text-white bg-[#1F3170] shadow-inner' : ''}`}
+                className={`accordion-button bg-white hover:shadow-md w-[600px] shadow-sm p-3 rounded-[10px] ${openIndex === index ? 'text-white bg-[#1F3170] shadow-inner' : ''}`}
                 onClick={() => toggleAccordion(index)}
               >
                 {faq.question}
               </button>
-              <div className={`accordion-content ${openIndex === index ? 'block' : 'hidden'}`}>
-                <p className="text-left">{faq.answer}</p>
+              <div className={`accordion-content bg-white p-6 ${openIndex === index ? 'block' : 'hidden'}`}>
+                <p className="text-left text-[0.9rem]">{faq.answer}</p>
               </div>
             </div>
           ))}
@@ -427,7 +434,7 @@ const Home = () => {
   </div>
 </div>
 
-    </>
+    </div>
   );
 };
 

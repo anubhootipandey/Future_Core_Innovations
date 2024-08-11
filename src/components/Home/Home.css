@@ -1,0 +1,19 @@
+
+
+.review-section{
+    padding: 50px;
+    margin: 40px 0px;
+    background:  linear-gradient(#1F3170, rgb(31 31 31 / 89%)), url('../media/review-bg.jpg') center;
+}
+
+.review-section h1{
+    color: white;
+    font-size: 3rem;
+    margin: 10px 0px;
+    font-weight: 700;
+    background-image: url('../media/bbblurry.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
