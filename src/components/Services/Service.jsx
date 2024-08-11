@@ -146,21 +146,21 @@ const Service = () => {
                 </div>
 
                 {/* Right Section with Image and Description */}
-                <div className='w-full relative -right-[7rem] md:w-2/3 flex flex-col'>
+                <div className='w-full relative md:-right-[7rem] md:w-2/3 flex flex-col'>
                     <h1 className='text-4xl font-bold mb-4'>{selectedService}</h1>
                     <img
                         className='rounded-2xl w-[40rem] h-80 object-cover mb-4'
                         src={image}
                         alt={selectedService}
                     />
-                    <p className='text-gray-700 w-[45rem]'>
+                    <p className='text-gray-700 md:w-[45rem]'>
                         {description}
                     </p>
                 </div>
             </div>
 
             {/* Key Factors Section */}
-            <div className='w-[36rem] mt-[4rem] relative left-[13rem]'>
+            <div className='md:w-[36rem] mt-[4rem] relative md:left-[13rem]'>
                 <h1 className='text-3xl font-bold mb-4'>Key Factors</h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                     {keyFactors.map((factor, index) => (
@@ -174,7 +174,7 @@ const Service = () => {
             </div>
 
             {/* Key Benefits Section */}
-            <div className='w-[36rem] mt-[4rem] relative left-[13rem] top-4'>
+            <div className='w-[36rem] mt-[4rem] relative left-[8rem] top-4'>
                 <h1 className='text-3xl font-bold mb-4'>Key Benefits</h1>
                 <ul className='list-disc list-inside text-gray-700'>
                     <li className='mb-2'>Reduce communication expenses with affordable VoIP calling...</li>
@@ -185,7 +185,7 @@ const Service = () => {
             </div>
 
             {/* Subscribe Section */}
-            <div className='mt-[4rem] w-[73rem] relative -left-[5rem] h-[26rem] top-20 p-8 rounded-lg flex flex-col'>
+            <div className='mt-[4rem] md:w-[73rem] relative md:-left-[5rem] h-[26rem] top-20 p-8 rounded-lg flex flex-col'>
                 <h1 className='text-5xl font-bold mb-4'>Subscribe to our newsletter</h1>
                 <p className='text-gray-600 mb-6'>
                     Subscribe to our newsletter and get exclusive deals you won't find anywhere else straight to your inbox.

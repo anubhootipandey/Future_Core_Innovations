@@ -37,7 +37,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className='hidden md:block ml-5'>
-          <button type='button' className='px-5 py-2 rounded-lg text-white bg-blue-950'>Contact Us</button>
+          <button type='button' className='px-5 py-2 rounded-lg text-white bg-blue-950'>
+            <Link to='/contact'>Contact Us</Link>
+          </button>
         </div>
         <div className='md:hidden'>
           <button onClick={toggleMenu} className='text-gray-600 hover:text-red-500 focus:outline-none'>
