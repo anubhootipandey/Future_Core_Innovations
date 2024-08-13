@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import blog1 from "../media/blog-1.jpg";
 import blog2 from "../media/blog-2.jpg";
 import blog3 from "../media/blog-3.jpg";
@@ -16,12 +16,92 @@ import faqImg from "../media/faq.png";
 import "./Home.css";
 
 const Home = () => {
-
+  const [visibleIndex, setVisibleIndex] = useState(0);
     const [openIndex, setOpenIndex] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handleIndicatorClick = (index) => {
+      setCurrentIndex(index);
+    };
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  const handleRightClick = () => {
+    setVisibleIndex((prevIndex) =>
+      prevIndex + 3 >= services.length ? prevIndex : prevIndex + 3
+    );
+  };
+
+  const handleLeftClick = () => {
+    setVisibleIndex((prevIndex) =>
+      prevIndex - 3 < 0 ? prevIndex : prevIndex - 3
+    );
+  };
+
+  const services = [
+    {
+      title: 'Cloud Databases',
+      tags: ['SQL', 'API', 'DBaaS'],
+      description: 'Cloud databases store and manage data on remote servers accessed over the internet. Cloud databases support real-time data processing and ensure high availability and disaster recovery.',
+      imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+    },
+    {
+      title: 'Website Hosting',
+      tags: ['HTTP/HTTPS', 'DNS', 'SSL/TLS'],
+      description: 'Website hosting provides the infrastructure and resources needed to make websites accessible online. It ensures fast load times, reliable uptime and allowing businesses to maintain a strong online presence and deliver a seamless user experience.',
+      imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+    },
+    {
+      title: 'IT Consulting',
+      tags: ['ERP', 'CRM', 'Data Analytics'],
+      description: 'We partner closely with our clients to assess their current IT infrastructure, identify opportunities for improvement, and develop customized solutions that drive efficiency and innovation. ',
+      imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+    },
+    {
+      title: 'Network Setup & Management',
+      tags: ['LAN/WAN', 'VPN', 'Firewall'],
+      description: "Network setup and management involve configuring and maintaining an organization's IT network. This ensures reliable connectivity, optimal performance, and robust security, supporting seamless communication and data transfer across devices and locations.",
+      imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+    },
+    {
+      title: 'Data Management and Analytics',
+      tags: ['ETL', 'Data Visualization', 'Reporting'],
+      description: 'Data management and analytics services help organizations efficiently collect, store, and analyze data. These services enable actionable insights, improve decision-making, and enhance operational efficiency by leveraging data-driven strategies and advanced analytical tools.',
+      imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+    },
+    {
+      title: 'Design and Development',
+      tags: ['UI/UX', 'HTML', 'CSS'],
+      description: 'Design and development services create and build customized digital solutions, from intuitive user interfaces to robust backend systems. These services ensure your website or application is visually appealing, functional, and aligned with your business objectives.',
+      imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+    },
+    {
+      title: 'Android Apps Development',
+      tags: ['XML', 'Java', 'React Navite'],
+      description: 'Android app development services create customized applications for Android devices, ensuring optimal performance and a seamless user experience. These services encompass everything from design and coding to testing and deployment, tailored to meet your business needs.',
+      imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+    },
+    {
+      title: 'Website Development',
+      tags: ['HTML', 'CSS', 'JS'],
+      description: 'Website development services create and maintain professional websites tailored to your business needs. From responsive design and seamless functionality to optimized performance and security, these services ensure a compelling online presence and an exceptional user experience.',
+      imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+    },
+    {
+      title: 'Cyber Security Services',
+      tags: ['Encryption', 'Threat Detection', 'IDS/IPS'],
+      description: "Cybersecurity services protect your digital assets from threats and breaches. These services include threat detection, risk assessment, firewall management, and incident response, ensuring robust defenses and safeguarding your organization's sensitive data and systems.",
+      imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+    },
+    {
+      title: 'VoIP and Unified Communications',
+      tags: ['SIP', 'Call Routing', 'PBX'],
+      description: 'VoIP and unified communications services streamline communication by integrating voice, video, and messaging into a single platform. These services enhance collaboration, reduce costs, and ensure seamless connectivity across various devices and locations.',
+      imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
+    },
+  ];
 
     const reviews = [
         {
@@ -262,57 +342,58 @@ const Home = () => {
 
 {/* service section */}
 <div className="bg-[#e1f3f4] p-[50px_60px] rounded-[20px] max-w-[1140px] mx-auto my-[80px_0_10px_0]">
-  <div className="relative">
-    <p className="text-[1rem] font-semibold m-0">SERVICES WE PROVIDE</p>
-    <h1 className="text-[3.5rem] font-bold bg-[url('media/bbblurry.svg')] bg-start bg-no-repeat text-[#1d3557]">
-      Best Quality <br /> Service for your <br /> Company.
-    </h1>
-    <div className="absolute right-0 top-0 mt-[10px]">
-      <i className="fa-solid fa-chevron-left bg-white p-[10px_14px] rounded-[20px] transition-all duration-300 mx-[10px_3px] cursor-pointer hover:bg-[#1d3557] hover:text-white"></i>
-      <i className="fa-solid fa-chevron-right bg-white p-[10px_14px] rounded-[20px] transition-all duration-300 mx-[10px_3px] cursor-pointer hover:bg-[#1d3557] hover:text-white"></i>
-    </div>
-  </div>
-  <div className="my-[90px] flex flex-wrap mx-auto">
-    {[
-      {
-        title: 'Cloud Databases',
-        tags: ['SQL', 'API', 'DBaaS'],
-        description: 'Cloud databases store and manage data on remote servers accessed over the internet. Cloud databases support real-time data processing and ensure high availability and disaster recovery.',
-        imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
-      },
-      {
-        title: 'Website Hosting',
-        tags: ['HTTP/HTTPS', 'DNS', 'SSL/TLS'],
-        description: 'Website hosting provides the infrastructure and resources needed to make websites accessible online. It ensures fast load times, reliable uptime and allowing businesses to maintain a strong online presence and deliver a seamless user experience.',
-        imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
-      },
-      {
-        title: 'IT Consulting',
-        tags: ['ERP', 'CRM', 'Data Analytics'],
-        description: 'We partner closely with our clients to assess their current IT infrastructure, identify opportunities for improvement, and develop customized solutions that drive efficiency and innovation. ',
-        imageSrcs: [featureIcon1, featureIcon2, featureIcon3]
-      },
-    ].map((service, index) => (
-      <div className="bg-white m-[10px] p-[20px] w-[300px] h-[370px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-200 hover:translate-y-[10px]" key={index}>
-        <h4 className="text-[1.2rem] font-semibold">{service.title}</h4>
-        <div className="flex flex-row">
-          {service.tags.map((tag, i) => (
-            <span className="mr-[20px] text-[12px] font-semibold" key={i}>{tag}</span>
-          ))}
+      <div className="relative">
+        <p className="text-[1rem] font-semibold m-0">SERVICES WE PROVIDE</p>
+        <h1 className="text-[3.5rem] font-bold bg-[url('media/bbblurry.svg')] bg-start bg-no-repeat text-[#1d3557]">
+          Best Quality <br /> Service for your <br /> Company.
+        </h1>
+        <div className="absolute right-0 top-0 mt-[10px]">
+          <FontAwesomeIcon
+            icon={faChevronLeft}
+            className="bg-white p-[10px_14px] rounded-[20px] transition-all duration-300 mx-[10px_3px] cursor-pointer hover:bg-[#1d3557] hover:text-white"
+            onClick={handleLeftClick}
+          />
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            className="bg-white p-[10px_14px] rounded-[20px] transition-all duration-300 mx-[10px_3px] cursor-pointer hover:bg-[#1d3557] hover:text-white"
+            onClick={handleRightClick}
+          />
         </div>
-        <div className="flex flex-row">
-          {service.imageSrcs.map((src, i) => (
-            <img src={src} alt={`${service.title} icon ${i}`} className="h-[40px] mr-[30px]" key={i} />
-          ))}
-        </div>
-        <p className="text-[#6c6b6b] text-[12px] my-[10px] font-normal">{service.description}</p>
-        <button className="bg-[#03103D] border-[#03103D] border-2 rounded-[5px] p-[5px_20px] text-[14px] font-normal text-white cursor-pointer transition-all duration-200">
-          <Link to="/service">Read more...</Link>
-        </button>
       </div>
-    ))}
-  </div>
-</div>
+      <div className="my-[90px] flex flex-wrap mx-auto overflow-hidden">
+        {services.slice(visibleIndex, visibleIndex + 3).map((service, index) => (
+          <div
+            className="bg-white m-[10px] p-[20px] w-[300px] h-[370px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-200 hover:translate-y-[10px]"
+            key={index}
+          >
+            <h4 className="text-[1.2rem] font-semibold">{service.title}</h4>
+            <div className="flex flex-row">
+              {service.tags.map((tag, i) => (
+                <span className="mr-[20px] text-[12px] font-semibold" key={i}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-row">
+              {service.imageSrcs.map((src, i) => (
+                <img
+                  src={src}
+                  alt={`${service.title} icon ${i}`}
+                  className="h-[40px] mr-[30px]"
+                  key={i}
+                />
+              ))}
+            </div>
+            <p className="text-[#6c6b6b] text-[12px] my-[10px] font-normal">
+              {service.description}
+            </p>
+            <button className="bg-[#03103D] border-[#03103D] border-2 rounded-[5px] p-[5px_20px] text-[14px] font-normal text-white cursor-pointer transition-all duration-200">
+              <Link to="/service">Read more...</Link>
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
 
 
 {/* work  section */}
@@ -330,7 +411,7 @@ const Home = () => {
     ].map((item, index) => (
       <div className="p-[20px] flex-[0_0_200px] bg-white m-[10px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-300 hover:bg-[#03103D] hover:translate-y-[-10px]" key={index}>
         <h4 className="text-[2rem] font-bold text-[#eb3b5a]">{item.step}</h4>
-        <p className="text-[#6c6b6b] font-semibold"> {item.description} </p>
+        <p className="text-[#6c6b6b] hover:text-white font-semibold"> {item.description} </p>
       </div>
     ))}
   </div>
@@ -338,23 +419,32 @@ const Home = () => {
 
 {/* review section */}
 <div className="review-section py-[50px] my-[40px]">
-  <div className="max-w-[1140px] max-h-[400px] h-[400px] mx-auto my-[20px] p-[20px] text-center">
-    <h1 className="text-white text-[3rem] my-[10px] font-bold">
-      What Our Client Says
-    </h1>
-    <div className="r-slider container">
-      {reviews.map((review, index) => (
-        <div className="user-rev" key={index}>
-          <p className="text-[14px] my-[20px] text-[#b1acac] mx-auto max-w-[500px]">
-            {review.text}
-          </p>
-          <h4 className="text-[1.5rem] font-bold text-white">{review.name}</h4>
-          <h5 className="text-[1.2rem] text-[#ccc] my-[10px]">{review.company}</h5>
+      <div className="max-w-[1140px] max-h-[700px] h-[400px] mx-auto my-[20px] p-[20px] text-center">
+        <h1 className="text-white text-[3rem] my-[10px] font-bold">
+          What Our Client Says
+        </h1>
+        <div className="r-slider container">
+          <div className="user-rev">
+            <p className="text-[14px] my-[20px] text-[#b1acac] mx-auto max-w-[500px]">
+              {reviews[currentIndex].text}
+            </p>
+            <h4 className="text-[1.5rem] font-bold text-white">{reviews[currentIndex].name}</h4>
+            <h5 className="text-[1.2rem] text-[#ccc] my-[10px]">{reviews[currentIndex].company}</h5>
+          </div>
         </div>
-      ))}
+        <div className="flex justify-center mt-[20px]">
+          {reviews.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => handleIndicatorClick(index)}
+              className={`w-[12px] h-[12px] rounded-full mx-[5px] cursor-pointer transition-all duration-300 ${
+                currentIndex === index ? 'bg-[#03103D]' : 'bg-[#ccc]'
+              }`}
+            ></div>
+          ))}
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
 {/* blog section */}
 <div id="blog" className="bg-[#f7f7f7] py-[50px] mt-[240px] px-[20px]">
@@ -401,7 +491,7 @@ const Home = () => {
     Frequently Asked Questions
   </h1>
 
-  <div className="my-[30px] flex items-center">
+  <div className="my-[30px] flex order-1 items-center">
     <div className="md:w-7/12 w-full">
       <div className="p-[20px]">
         <div className="accordion">
@@ -422,7 +512,7 @@ const Home = () => {
       </div>
     </div>
 
-    <div className="md:w-5/12 w-full">
+    <div className="md:w-5/12 order-2 w-full">
       <div className="p-[20px]">
         <img
           src={faqImg}

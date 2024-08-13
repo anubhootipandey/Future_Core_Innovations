@@ -100,7 +100,7 @@ const Features = () => {
     return (
         <>
             {/* Features Section */}
-            <section id="feature-sec" className="flex flex-col items-center justify-center w-full h-full bg-gray-100 mt-12">
+            <section id="feature-sec" className="flex flex-col items-center justify-center w-full h-full bg-gray-100 mt-0">
                 <div className="sec-heading mb-8">
                     <h1 className="text-4xl font-bold">Let's Know Our Features</h1>
                 </div>
