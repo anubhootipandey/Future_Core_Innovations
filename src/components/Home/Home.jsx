@@ -251,66 +251,67 @@ const Home = () => {
 </div>
 
 <div id="container" className="max-w-5xl mx-auto my-30 px-4">
-  <div className="text text-center mb-10">
-    <p className="font-semibold">How Can We Help You</p>
-    <h1 className="text-center text-4xl font-extrabold text-gray-800 py-4">We’re helping teams do their best work</h1>
-  </div>
-  <div className="flex flex-wrap justify-center md:justify-between gap-6">
-    <div className="quantity q1 bg-[#e9ddff] w-full md:w-[480px] border-l-4 border-[#e9ddff] p-6 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
-      <div className="inner-qn flex items-center justify-between">
-        <div>
-          <h3 className="text-gray-800 text-xl font-semibold">Zero Configuration</h3>
-          <p className="text-gray-800 text-sm mt-5">
-            Zero Configuration, Maximum Security - Effortless Integration and Protection for Your Digital Solutions.
-          </p>
+      <div className="text text-center mb-10">
+        <p className="font-semibold">How Can We Help You</p>
+        <h1 className="text-center text-4xl font-extrabold text-gray-800 py-4">
+          We’re helping teams do their best work
+        </h1>
+      </div>
+      <div className="flex flex-wrap justify-center md:justify-between gap-6">
+        <div className="quantity q1 bg-[#e9ddff] w-full md:w-[480px] border-l-4 border-[#e9ddff] p-6 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
+          <div className="inner-qn flex items-center justify-between">
+            <div>
+              <h3 className="text-gray-800 text-xl font-semibold">Zero Configuration</h3>
+              <p className="text-gray-800 text-sm mt-5">
+                Zero Configuration, Maximum Security - Effortless Integration and Protection for Your Digital Solutions.
+              </p>
+            </div>
+            <div>
+              <img src={ser02} alt="Zero Configuration" className="h-36" />
+            </div>
+          </div>
         </div>
-        <div>
-          <img src={ser02} alt="Zero Configuration" className="h-36"/>
+        <div className="quantity q2 bg-[#ffdadb] w-full md:w-[480px] border-l-4 border-[#ffdadb] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
+          <div className="inner-qn flex items-center justify-between">
+            <div>
+              <h3 className="text-gray-800 text-xl font-semibold">Code Security</h3>
+              <p className="text-gray-800 text-sm mt-5">
+                Robust Code Security - Protecting Your Applications from Vulnerabilities with Expert Precision and Care.
+              </p>
+            </div>
+            <div>
+              <img src={ser01} alt="Code Security" className="h-36" />
+            </div>
+          </div>
+        </div>
+        <div className="quantity q3 bg-[#d6edff] w-full md:w-[480px] border-l-4 border-[#d6edff] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
+          <div className="inner-qn flex items-center justify-between">
+            <div>
+              <h3 className="text-gray-800 text-xl font-semibold">Team Management</h3>
+              <p className="text-gray-800 text-sm mt-5">
+                Effective Team Management - Streamlining Collaboration and Productivity for Optimal Project Success and Growth.
+              </p>
+            </div>
+            <div>
+              <img src={ser03} alt="Team Management" className="h-36" />
+            </div>
+          </div>
+        </div>
+        <div className="quantity q4 bg-[#ffede1] w-full md:w-[480px] border-l-4 border-[#ffede1] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
+          <div className="inner-qn flex items-center justify-between">
+            <div>
+              <h3 className="text-gray-800 text-xl font-semibold">Access Controlled</h3>
+              <p className="text-gray-800 text-sm mt-5">
+                Access Controlled - Ensuring Secure, Authorized Entry to Your Systems with Robust Protection Measures.
+              </p>
+            </div>
+            <div>
+              <img src={ser02} alt="Access Controlled" className="h-36" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div className="quantity q2 bg-[#ffdadb] w-full md:w-[480px] border-l-4 border-[#ffdadb] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
-      <div className="inner-qn flex items-center justify-between">
-        <div>
-          <h3 className="text-gray-800 text-xl font-semibold">Code Security</h3>
-          <p className="text-gray-800 text-sm mt-5">
-            Robust Code Security - Protecting Your Applications from Vulnerabilities with Expert Precision and Care.
-          </p>
-        </div>
-        <div>
-          <img src={ser01} alt="Code Security" className="h-36"/>
-        </div>
-      </div>
-    </div>
-    <div className="quantity q3 bg-[#d6edff] w-full md:w-[480px] border-l-4 border-[#d6edff] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
-      <div className="inner-qn flex items-center justify-between">
-        <div>
-          <h3 className="text-gray-800 text-xl font-semibold">Team Management</h3>
-          <p className="text-gray-800 text-sm mt-5">
-            Effective Team Management - Streamlining Collaboration and Productivity for Optimal Project Success and Growth.
-          </p>
-        </div>
-        <div>
-          <img src={ser03} alt="Team Management" className="h-36"/>
-        </div>
-      </div>
-    </div>
-    <div className="quantity q4 bg-[#ffede1] w-full md:w-[480px] border-l-4 border-[#ffede1] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
-      <div className="inner-qn flex items-center justify-between">
-        <div>
-          <h3 className="text-gray-800 text-xl font-semibold">Access Controlled</h3>
-          <p className="text-gray-800 text-sm mt-5">
-            Access Controlled - Ensuring Secure, Authorized Entry to Your Systems with Robust Protection Measures.
-          </p>
-        </div>
-        <div>
-          <img src={ser02} alt="Access Controlled" className="h-36"/>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 {/* about section */}
 
@@ -321,7 +322,7 @@ const Home = () => {
         <img
           src={aboutBgImg}
           alt="About Company"
-          className="rounded-lg m-2 transition-transform duration-300 transform hover:scale-110"
+          className="rounded-lg m-2 transition-transform duration-300 transform hover:scale-110 animated-img"
         />
       </div>
     </div>
@@ -408,25 +409,25 @@ const Home = () => {
 
 
 {/* work  section */}
-<div className="max-w-[1140px] mx-auto my-[40px] p-[10px] text-center">
-  <h1 className="text-[#1d3557] my-[10px] text-[3.3rem] font-bold bg-[url('media/bbblurry.svg')] bg-center bg-no-repeat bg-contain">
-    Our Working <br /> Process
-  </h1>
+<div className="work-section max-w-[1140px] mx-auto my-[40px] p-[10px] text-center">
+      <h1 className="text-[#1d3557] my-[10px] text-[3.3rem] font-bold">
+        Our Working <br /> Process
+      </h1>
 
-  <div className="flex flex-wrap items-stretch justify-center mt-[50px]">
-    {[
-      { step: 'Meet', description: 'With Client' },
-      { step: 'Think', description: 'Brainstorming' },
-      { step: 'Plan', description: 'Make the Solutions' },
-      { step: 'Execute', description: 'Deliver' }
-    ].map((item, index) => (
-      <div className="p-[20px] flex-[1_1_200px] bg-white m-[10px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-300 hover:bg-[#03103D] hover:translate-y-[-10px]" key={index}>
-        <h4 className="text-[2rem] font-bold text-[#eb3b5a]">{item.step}</h4>
-        <p className="text-[#6c6b6b] hover:text-white font-semibold">{item.description}</p>
+      <div className="flex flex-wrap items-stretch justify-center mt-[50px]">
+        {[
+          { step: 'Meet', description: 'With Client' },
+          { step: 'Think', description: 'Brainstorming' },
+          { step: 'Plan', description: 'Make the Solutions' },
+          { step: 'Execute', description: 'Deliver' }
+        ].map((item, index) => (
+          <div className="p-[20px] flex-[1_1_200px] bg-white m-[10px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-300 hover:bg-[#03103D] hover:translate-y-[-10px] card" key={index}>
+            <h4 className="text-[2rem] font-bold text-[#eb3b5a]">{item.step}</h4>
+            <p className="text-[#6c6b6b] hover:text-white font-semibold">{item.description}</p>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</div>
+    </div>
 
 
 {/* review section */}
@@ -500,50 +501,50 @@ const Home = () => {
 
 {/* faq section */}
 <div id="faq" className="max-w-[1140px] mx-auto my-[10px] mb-[40px] p-[10px]">
-  <h1 className="text-center mt-[60px] text-[3rem] text-[#1d3557] font-bold">
-    Frequently Asked Questions
-  </h1>
+      <h1 className="text-center mt-[60px] text-[3rem] text-[#1d3557] font-bold">
+        Frequently Asked Questions
+      </h1>
 
-  <div className="my-[30px] flex flex-col lg:flex-row order-1 items-center">
-    <div className="lg:w-7/12 w-full">
-      <div className="p-[20px]">
-        <div className="accordion">
-          {faqData.map((faq, index) => (
-            <div key={index} className="my-[15px] border-none rounded-[10px]">
-              <button
-                className={`accordion-button bg-white hover:shadow-md w-full lg:w-[600px] shadow-sm p-3 flex justify-between items-center rounded-[10px] ${
-                  openIndex === index ? 'text-white bg-[#1F3170] shadow-inner' : ''
-                }`}
-                onClick={() => toggleAccordion(index)}
-              >
-                <span>{faq.question}</span>
-                <FontAwesomeIcon
-                  icon={faChevronDown}
-                  className={`transition-transform duration-300 ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
-              <div className={`accordion-content rounded-sm bg-white p-6 ${openIndex === index ? 'block' : 'hidden'}`}>
-                <p className="text-left text-[0.9rem]">{faq.answer}</p>
-              </div>
+      <div className="my-[30px] flex flex-col lg:flex-row order-1 items-center">
+        <div className="lg:w-7/12 w-full">
+          <div className="p-[20px]">
+            <div className="accordion">
+              {faqData.map((faq, index) => (
+                <div key={index} className="accordion-item my-[15px] border-none rounded-[10px]">
+                  <button
+                    className={`accordion-button bg-white hover:shadow-md w-full lg:w-[600px] shadow-sm p-3 flex justify-between items-center rounded-[10px] ${
+                      openIndex === index ? 'text-white bg-[#1F3170] shadow-inner' : ''
+                    }`}
+                    onClick={() => toggleAccordion(index)}
+                  >
+                    <span>{faq.question}</span>
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      className={`transition-transform duration-300 ${
+                        openIndex === index ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  <div className={`accordion-content rounded-sm bg-white p-6 ${openIndex === index ? 'block' : 'hidden'}`}>
+                    <p className="text-left text-[0.9rem]">{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+        </div>
+
+        <div className="lg:w-5/12 w-full order-2">
+          <div className="p-[20px]">
+            <img
+              src={faqImg}
+              alt="FAQ"
+              className="w-full h-auto rounded-[50px] transition-transform duration-300 transform hover:scale-110"
+            />
+          </div>
         </div>
       </div>
     </div>
-
-    <div className="lg:w-5/12 w-full order-2">
-      <div className="p-[20px]">
-        <img
-          src={faqImg}
-          alt="faq img"
-          className="w-full h-auto rounded-[50px] transition-transform duration-300 transform hover:scale-110"
-        />
-      </div>
-    </div>
-  </div>
-</div>
 
     </div>
   );

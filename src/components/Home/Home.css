@@ -3,7 +3,7 @@
 }
 
 
-#container h1{
+#container h1, .work-section h1{
     background: no-repeat center url("../media/bbblurry.svg");
 }
 
@@ -56,5 +56,98 @@
       flex-direction: column;
       width: calc(100% - 200px); 
     }
+  }
+  
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .quantity {
+    animation: slideInFromLeft 0.6s ease-out forwards; 
+  }
+  
+  .quantity.q1 {
+    animation-delay: 0s;
+  }
+  .quantity.q2 {
+    animation-delay: 0.2s;
+  }
+  .quantity.q3 {
+    animation-delay: 0.4s;
+  }
+  .quantity.q4 {
+    animation-delay: 0.6s;
+  }
+  
+  .animated-img {
+    animation: slideInFromLeft 0.6s ease-out forwards; 
+  }
+
+@keyframes dropFromTop {
+    from {
+      transform: translateY(-50px); 
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0); 
+      opacity: 1;
+    }
+  }
+  
+  .card {
+    animation: dropFromTop 0.5s ease-out forwards; 
+    opacity: 0; 
+  }
+  
+  .card:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .card:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .card:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .card:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+
+@keyframes dropFromTop {
+    from {
+      transform: translateY(-20px); 
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0); 
+      opacity: 1;
+    }
+  }
+  
+  
+  .accordion-item {
+    animation: dropFromTop 0.5s ease-out forwards; 
+    opacity: 0; 
+  }
+  
+  
+  .accordion-item:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .accordion-item:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .accordion-item:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .accordion-item:nth-child(4) {
+    animation-delay: 0.8s;
   }
   
