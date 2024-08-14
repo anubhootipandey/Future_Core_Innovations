@@ -1,4 +1,11 @@
 
+#container h1{
+    background: no-repeat center url("../media/bbblurry.svg");
+}
+
+.relative h1{
+    background: no-repeat url("../media/bbblurry.svg");
+}
 
 .review-section{
     padding: 50px;

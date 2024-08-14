@@ -11,11 +11,11 @@ const Contact = () => {
           We'd love to hear from you <br /> for your message
         </div>
         <div className="row">
-          <div className="col-md-5">
-            <img src={contactImg} alt="" className="img-fluid" />
+          <div className="col-md-5 w-full lg:w-5/12">
+            <img src={contactImg} alt="" className="img-fluid w-full h-auto" />
           </div>
 
-          <div className="col-md-7">
+          <div className="col-md-7 w-full lg:w-7/12">
             <form id="contact-form" action="#" method="post">
               <div className="grid-form">
                 <div className="form-group">

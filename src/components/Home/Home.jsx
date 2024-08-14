@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle, faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faChevronRight, faChevronLeft, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import blog1 from "../media/blog-1.jpg";
 import blog2 from "../media/blog-2.jpg";
 import blog3 from "../media/blog-3.jpg";
@@ -180,75 +180,78 @@ const Home = () => {
 
   return (
     <div className="bg-gray-100">
-<div id="main" className="bg-center bg-cover bg-gradient-to-b from-[#061443] to-[#171717]/90">
-  <div id="hero" className="flex flex-row justify-around items-center h-[840px] mx-auto max-w-[1100px]">
-    <div className="content md:order-1 p-5 lg:p-10">
-      <h6 className="text-gray-300 mb-1">Future Core Innovations.</h6>
-      <h1 className="text-white text-4xl font-bold mb-10">Innovating <br /> Tomorrow, Today</h1>
-      <p className="text-gray-300 text-sm w-[500px] mr-[6rem] font-medium mb-8">
-        At Future Core Innovations, we specialize in delivering state-of-the-art web development, app development, and comprehensive IT services. Our expert team is dedicated to transforming your vision into reality.
-      </p>
-      <div>
-        <button className="bg-transparent border-none">
-          <Link 
-            to="/contact"
-            className="bg-white text-black border-2 border-[#eb3b5a] py-4 px-10 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-[#eb3b5a] hover:text-white"
-          >
-            Get Started Now
-          </Link>
-        </button>
-      </div>
-    </div>
-    <div className="box-con flex flex-wrap md:order-2 justify-evenly items-center">
-      <div className="box-con-inner ml-[-180px] mt-[200px] bg-white w-[170px] p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
-        <div className="flex space-x-1">
-          <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
-          <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
-          <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
-        </div>
+<div className="bg-gray-100">
+  <div id="main" className="bg-center bg-cover bg-gradient-to-b from-[#061443] to-[#171717]/90">
+    <div id="hero" className="flex flex-col lg:flex-row justify-around items-center h-auto lg:h-[840px] mx-auto max-w-[1100px] p-4">
+      <div className="content md:order-1 p-5 lg:p-10">
+        <h6 className="text-gray-300 mb-1">Future Core Innovations.</h6>
+        <h1 className="text-white text-4xl font-bold mb-10">Innovating <br /> Tomorrow, Today</h1>
+        <p className="text-gray-300 text-sm w-full lg:w-[500px] lg:mr-[6rem] font-medium mb-8">
+          At Future Core Innovations, we specialize in delivering state-of-the-art web development, app development, and comprehensive IT services. Our expert team is dedicated to transforming your vision into reality.
+        </p>
         <div>
-          <h4 className="text-xl font-bold mt-2 mb-1">Android Apps Development</h4>
-          <p className="text-sm">"At first, the purpose of Android was thought of as a mobile OS."</p>
+          <button className="bg-transparent border-none">
+            <Link 
+              to="/contact"
+              className="bg-white text-black border-2 border-[#eb3b5a] py-4 px-10 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-[#eb3b5a] hover:text-white"
+            >
+              Get Started Now
+            </Link>
+          </button>
         </div>
       </div>
-      <div className="box-con-inner bg-white p-5 ml-[-65px] w-[250px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
-        <div className="flex space-x-1">
-          <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
-          <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
-          <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
+      <div className="box-con flex flex-col lg:flex-wrap md:order-2 justify-center lg:justify-evenly items-center">
+        <div className="box-con-inner lg:ml-[-180px] mt-10 lg:mt-[200px] bg-white w-[170px] p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+          <div className="flex space-x-1">
+            <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
+            <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
+            <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
+          </div>
+          <div>
+            <h4 className="text-xl font-bold mt-2 mb-1">Android Apps Development</h4>
+            <p className="text-sm">"At first, the purpose of Android was thought of as a mobile OS."</p>
+          </div>
         </div>
-        <div>
-          <h4 className="text-xl font-bold mt-2 mb-1">Cyber Security Services</h4>
-          <p className="text-sm">"Blocking malware and spam, vulnerability scanning, intrusion detection, firewalls,"</p>
+        <div className="box-con-inner mt-10 lg:mt-0 bg-white p-5 lg:ml-[-65px] w-[250px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+          <div className="flex space-x-1">
+            <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
+            <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
+            <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
+          </div>
+          <div>
+            <h4 className="text-xl font-bold mt-2 mb-1">Cyber Security Services</h4>
+            <p className="text-sm">"Blocking malware and spam, vulnerability scanning, intrusion detection, firewalls,"</p>
+          </div>
         </div>
-      </div>
-      <div className="box-con-inner bg-white mt-[-60px]  p-5 w-[250px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
-        <div className="flex space-x-1">
-          <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
-          <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
-          <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
-        </div>
-        <div>
-          <h4 className="text-xl font-bold mt-2 mb-1">Design & Development</h4>
-          <p className="text-sm">"The process of creating software applications and systems by combining design and development activities"</p>
+        <div className="box-con-inner mt-10 lg:mt-[-60px] bg-white p-5 w-[250px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+          <div className="flex space-x-1">
+            <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
+            <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
+            <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
+          </div>
+          <div>
+            <h4 className="text-xl font-bold mt-2 mb-1">Design & Development</h4>
+            <p className="text-sm">"The process of creating software applications and systems by combining design and development activities"</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <div className="text-center my-5 hero-down-btn">
   <h4 className="text-gray-400 text-base">Web Development, Cyber Security, IT Consulting and More.</h4>
-  <i className="fa fa-angle-down text-3xl text-gray-400"></i>
+  <FontAwesomeIcon icon={faChevronDown} className="m-4 h-6" />
 </div>
 
-<div id="container" className="max-w-5xl mx-auto my-30">
+<div id="container" className="max-w-5xl mx-auto my-30 px-4">
   <div className="text text-center mb-10">
     <p className="font-semibold">How Can We Help You</p>
-    <h1 className="text-center text-4xl font-extrabold text-gray-800 bg-[url('media/bbblurry.svg')] bg-center bg-no-repeat py-4">We’re helping teams do their best work</h1>
+    <h1 className="text-center text-4xl font-extrabold text-gray-800 py-4">We’re helping teams do their best work</h1>
   </div>
-  <div className="flex flex-wrap justify-between gap-6">
-    <div className="quantity q1 bg-[#e9ddff] w-[500px] border-l-4 border-[#e9ddff] p-6 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
+  <div className="flex flex-wrap justify-center md:justify-between gap-6">
+    <div className="quantity q1 bg-[#e9ddff] w-full md:w-[480px] border-l-4 border-[#e9ddff] p-6 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
       <div className="inner-qn flex items-center justify-between">
         <div>
           <h3 className="text-gray-800 text-xl font-semibold">Zero Configuration</h3>
@@ -261,7 +264,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <div className="quantity q2 bg-[#ffdadb] w-[500px] border-l-4 border-[#ffdadb] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
+    <div className="quantity q2 bg-[#ffdadb] w-full md:w-[480px] border-l-4 border-[#ffdadb] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
       <div className="inner-qn flex items-center justify-between">
         <div>
           <h3 className="text-gray-800 text-xl font-semibold">Code Security</h3>
@@ -274,7 +277,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <div className="quantity q3 bg-[#d6edff] w-[500px] border-l-4 border-[#d6edff] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
+    <div className="quantity q3 bg-[#d6edff] w-full md:w-[480px] border-l-4 border-[#d6edff] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
       <div className="inner-qn flex items-center justify-between">
         <div>
           <h3 className="text-gray-800 text-xl font-semibold">Team Management</h3>
@@ -287,7 +290,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <div className="quantity q4 bg-[#ffede1] w-[500px] border-l-4 border-[#ffede1] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
+    <div className="quantity q4 bg-[#ffede1] w-full md:w-[480px] border-l-4 border-[#ffede1] p-5 rounded-lg shadow-md hover:border-l-4 hover:border-gray-950 hover:translate-y-[-10px] transition-transform duration-100">
       <div className="inner-qn flex items-center justify-between">
         <div>
           <h3 className="text-gray-800 text-xl font-semibold">Access Controlled</h3>
@@ -303,10 +306,11 @@ const Home = () => {
   </div>
 </div>
 
+
 {/* about section */}
 
-      <div id="about" className="max-w-[1140px] mx-auto my-12 p-5">
-  <div className="flex items-center">
+<div id="about" className="max-w-[1140px] mx-auto my-12 p-5">
+  <div className="flex flex-col lg:flex-row items-center">
     <div className="lg:w-1/2 w-full">
       <div className="p-5 m-2">
         <img
@@ -340,60 +344,62 @@ const Home = () => {
   </div>
 </div>
 
+
 {/* service section */}
 <div className="bg-[#e1f3f4] p-[50px_60px] rounded-[20px] max-w-[1140px] mx-auto my-[80px_0_10px_0]">
-      <div className="relative">
-        <p className="text-[1rem] font-semibold m-0">SERVICES WE PROVIDE</p>
-        <h1 className="text-[3.5rem] font-bold bg-[url('media/bbblurry.svg')] bg-start bg-no-repeat text-[#1d3557]">
-          Best Quality <br /> Service for your <br /> Company.
-        </h1>
-        <div className="absolute right-0 top-0 mt-[10px]">
-          <FontAwesomeIcon
-            icon={faChevronLeft}
-            className="bg-white p-[10px_14px] rounded-[20px] transition-all duration-300 mx-[10px_3px] cursor-pointer hover:bg-[#1d3557] hover:text-white"
-            onClick={handleLeftClick}
-          />
-          <FontAwesomeIcon
-            icon={faChevronRight}
-            className="bg-white p-[10px_14px] rounded-[20px] transition-all duration-300 mx-[10px_3px] cursor-pointer hover:bg-[#1d3557] hover:text-white"
-            onClick={handleRightClick}
-          />
-        </div>
-      </div>
-      <div className="my-[90px] flex flex-wrap mx-auto overflow-hidden">
-        {services.slice(visibleIndex, visibleIndex + 3).map((service, index) => (
-          <div
-            className="bg-white m-[10px] p-[20px] w-[300px] h-[370px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-200 hover:translate-y-[10px]"
-            key={index}
-          >
-            <h4 className="text-[1.2rem] font-semibold">{service.title}</h4>
-            <div className="flex flex-row">
-              {service.tags.map((tag, i) => (
-                <span className="mr-[20px] text-[12px] font-semibold" key={i}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <div className="flex flex-row">
-              {service.imageSrcs.map((src, i) => (
-                <img
-                  src={src}
-                  alt={`${service.title} icon ${i}`}
-                  className="h-[40px] mr-[30px]"
-                  key={i}
-                />
-              ))}
-            </div>
-            <p className="text-[#6c6b6b] text-[12px] my-[10px] font-normal">
-              {service.description}
-            </p>
-            <button className="bg-[#03103D] border-[#03103D] border-2 rounded-[5px] p-[5px_20px] text-[14px] font-normal text-white cursor-pointer transition-all duration-200">
-              <Link to="/service">Read more...</Link>
-            </button>
-          </div>
-        ))}
-      </div>
+  <div className="relative">
+    <p className="text-[1rem] font-semibold m-0">SERVICES WE PROVIDE</p>
+    <h1 className="text-[3.5rem] font-bold  text-[#1d3557]">
+      Best Quality <br /> Service for your <br /> Company.
+    </h1>
+    <div className="absolute right-0 top-0 mt-[10px]">
+      <FontAwesomeIcon
+        icon={faChevronLeft}
+        className="bg-white p-[10px_14px] rounded-[20px] transition-all duration-300 mx-[10px_3px] cursor-pointer hover:bg-[#1d3557] hover:text-white"
+        onClick={handleLeftClick}
+      />
+      <FontAwesomeIcon
+        icon={faChevronRight}
+        className="bg-white p-[10px_14px] rounded-[20px] transition-all duration-300 mx-[10px_3px] cursor-pointer hover:bg-[#1d3557] hover:text-white"
+        onClick={handleRightClick}
+      />
     </div>
+  </div>
+  <div className="my-[90px] flex flex-wrap mx-auto overflow-hidden">
+    {services.slice(visibleIndex, visibleIndex + (window.innerWidth < 640 ? 1 : 3)).map((service, index) => (
+      <div
+        className="bg-white m-[10px] p-[20px] w-full sm:w-[300px] h-[370px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-200 hover:translate-y-[10px]"
+        key={index}
+      >
+        <h4 className="text-[1.2rem] font-semibold">{service.title}</h4>
+        <div className="flex flex-row">
+          {service.tags.map((tag, i) => (
+            <span className="mr-[20px] text-[12px] font-semibold" key={i}>
+              {tag}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-row">
+          {service.imageSrcs.map((src, i) => (
+            <img
+              src={src}
+              alt={`${service.title} icon ${i}`}
+              className="h-[40px] mr-[30px]"
+              key={i}
+            />
+          ))}
+        </div>
+        <p className="text-[#6c6b6b] text-[12px] my-[10px] font-normal">
+          {service.description}
+        </p>
+        <button className="bg-[#03103D] border-[#03103D] border-2 rounded-[5px] p-[5px_20px] text-[14px] font-normal text-white cursor-pointer transition-all duration-200">
+          <Link to="/service">Read more...</Link>
+        </button>
+      </div>
+    ))}
+  </div>
+</div>
+
 
 
 {/* work  section */}
@@ -402,52 +408,54 @@ const Home = () => {
     Our Working <br /> Process
   </h1>
 
-  <div className="flex flex-row items-stretch justify-center mt-[50px]">
+  <div className="flex flex-wrap items-stretch justify-center mt-[50px]">
     {[
       { step: 'Meet', description: 'With Client' },
       { step: 'Think', description: 'Brainstorming' },
       { step: 'Plan', description: 'Make the Solutions' },
       { step: 'Execute', description: 'Deliver' }
     ].map((item, index) => (
-      <div className="p-[20px] flex-[0_0_200px] bg-white m-[10px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-300 hover:bg-[#03103D] hover:translate-y-[-10px]" key={index}>
+      <div className="p-[20px] flex-[1_1_200px] bg-white m-[10px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-300 hover:bg-[#03103D] hover:translate-y-[-10px]" key={index}>
         <h4 className="text-[2rem] font-bold text-[#eb3b5a]">{item.step}</h4>
-        <p className="text-[#6c6b6b] hover:text-white font-semibold"> {item.description} </p>
+        <p className="text-[#6c6b6b] hover:text-white font-semibold">{item.description}</p>
       </div>
     ))}
   </div>
 </div>
 
+
 {/* review section */}
 <div className="review-section py-[50px] my-[40px]">
-      <div className="max-w-[1140px] max-h-[700px] h-[400px] mx-auto my-[20px] p-[20px] text-center">
-        <h1 className="text-white text-[3rem] my-[10px] font-bold">
-          What Our Client Says
-        </h1>
-        <div className="r-slider container">
-          <div className="user-rev">
-            <p className="text-[14px] my-[20px] text-[#b1acac] mx-auto max-w-[500px]">
-              {reviews[currentIndex].text}
-            </p>
-            <h4 className="text-[1.5rem] font-bold text-white">{reviews[currentIndex].name}</h4>
-            <h5 className="text-[1.2rem] text-[#ccc] my-[10px]">{reviews[currentIndex].company}</h5>
-          </div>
-        </div>
-        <div className="flex justify-center mt-[20px]">
-          {reviews.map((_, index) => (
-            <div
-              key={index}
-              onClick={() => handleIndicatorClick(index)}
-              className={`w-[12px] h-[12px] rounded-full mx-[5px] cursor-pointer transition-all duration-300 ${
-                currentIndex === index ? 'bg-[#03103D]' : 'bg-[#ccc]'
-              }`}
-            ></div>
-          ))}
-        </div>
+  <div className="max-w-[1140px] max-h-[700px] h-auto lg:h-[400px] mx-auto my-[20px] p-[20px] text-center">
+    <h1 className="text-white text-[3rem] my-[10px] font-bold">
+      What Our Client Says
+    </h1>
+    <div className="r-slider container">
+      <div className="user-rev">
+        <p className="text-[14px] my-[20px] text-[#b1acac] mx-auto max-w-[500px]">
+          {reviews[currentIndex].text}
+        </p>
+        <h4 className="text-[1.5rem] font-bold text-white">{reviews[currentIndex].name}</h4>
+        <h5 className="text-[1.2rem] text-[#ccc] my-[10px]">{reviews[currentIndex].company}</h5>
       </div>
     </div>
+    <div className="flex justify-center mt-[20px]">
+      {reviews.map((_, index) => (
+        <div
+          key={index}
+          onClick={() => handleIndicatorClick(index)}
+          className={`w-[12px] h-[12px] rounded-full mx-[5px] cursor-pointer transition-all duration-300 ${
+            currentIndex === index ? 'bg-[#03103D]' : 'bg-[#ccc]'
+          }`}
+        ></div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
 {/* blog section */}
-<div id="blog" className="bg-[#f7f7f7] py-[50px] mt-[240px] px-[20px]">
+<div id="blog" className="bg-[#f7f7f7] py-[50px] px-[20px]">
   <div className="max-w-[1140px] mx-auto my-[20px]">
     <div className="text-center mb-[40px]">
       <p className="text-[#585555] font-semibold text-[20px] mb-[5px]">Latest News</p>
@@ -486,24 +494,32 @@ const Home = () => {
 </div>
 
 {/* faq section */}
-    <div id="faq" className="max-w-[1140px] mx-auto my-[10px] mb-[40px] p-[10px]">
+<div id="faq" className="max-w-[1140px] mx-auto my-[10px] mb-[40px] p-[10px]">
   <h1 className="text-center mt-[60px] text-[3rem] text-[#1d3557] font-bold">
     Frequently Asked Questions
   </h1>
 
-  <div className="my-[30px] flex order-1 items-center">
-    <div className="md:w-7/12 w-full">
+  <div className="my-[30px] flex flex-col lg:flex-row order-1 items-center">
+    <div className="lg:w-7/12 w-full">
       <div className="p-[20px]">
         <div className="accordion">
           {faqData.map((faq, index) => (
             <div key={index} className="my-[15px] border-none rounded-[10px]">
               <button
-                className={`accordion-button bg-white hover:shadow-md w-[600px] shadow-sm p-3 rounded-[10px] ${openIndex === index ? 'text-white bg-[#1F3170] shadow-inner' : ''}`}
+                className={`accordion-button bg-white hover:shadow-md w-full lg:w-[600px] shadow-sm p-3 flex justify-between items-center rounded-[10px] ${
+                  openIndex === index ? 'text-white bg-[#1F3170] shadow-inner' : ''
+                }`}
                 onClick={() => toggleAccordion(index)}
               >
-                {faq.question}
+                <span>{faq.question}</span>
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={`transition-transform duration-300 ${
+                    openIndex === index ? 'rotate-180' : ''
+                  }`}
+                />
               </button>
-              <div className={`accordion-content bg-white p-6 ${openIndex === index ? 'block' : 'hidden'}`}>
+              <div className={`accordion-content rounded-sm bg-white p-6 ${openIndex === index ? 'block' : 'hidden'}`}>
                 <p className="text-left text-[0.9rem]">{faq.answer}</p>
               </div>
             </div>
@@ -512,7 +528,7 @@ const Home = () => {
       </div>
     </div>
 
-    <div className="md:w-5/12 order-2 w-full">
+    <div className="lg:w-5/12 w-full order-2">
       <div className="p-[20px]">
         <img
           src={faqImg}

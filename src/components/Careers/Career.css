@@ -25,12 +25,6 @@
     font-weight: 600;
     color: #03103D;
 }
-
-/* .option-filter{
-    display: flex;
-    flex-direction: row;
-    align-items: center     ;
-} */
 .option-filter span{
     margin: 0px 10px;
 }
@@ -47,18 +41,7 @@
     left: 20px;
     font-size: 17px;
 }
-.option-filter input{
-    width: 100%;
-    border: none;
-    background: transparent ;
-    padding: 8px 20px 8px 50px;
-    border-radius: 10px;
-}
 
-.option-filter input:focus{
-    outline: 1px solid rgb(101, 101, 101)   ;
-   
-}
 .option-filter input::placeholder{
     color: #696969;
     font-size: 15px ;
@@ -71,42 +54,59 @@
 }
 
 select {
-    appearance: none;
+    border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 14px;
 }
 select:focus{
     outline: 1px solid rgb(101, 101, 101);
 }
-.option-filter select{
+
+.option-filter select {
     padding: 8px 30px 8px 20px;
-    background-color: rgb(234, 234, 234)     ;
+    background-color: rgb(234, 234, 234);
     border: none;
     color: #2d2d2d;
-     font-size: 15px;
-     
-     border-radius: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    position: relative;
 }
 
 .option-filter option{
     color: #696969;
     font-size: 15px;
 }
-.Category , .filter{
-    margin-left: 22px !important;
-   
-    background-color: transparent    ;
-    border: none;
-    color: #2d2d2d;
-     font-size: 15px;
-     border-radius: 5px;
-     position: relative;
+
+.option-filter .job-in .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px; 
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: #999;
 }
 
-/* no open sec */
+.option-filter input {
+    width: calc(100% - 40px); 
+    border: none;
+    background: transparent;
+    padding: 8px 20px 8px 40px; 
+    border-radius: 10px;
+}
+
+.Category .fa-caret-down, .filter .fa-caret-down {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #999;
+}
 
 #n-open
 {
     max-width:800px;
-    /* background-color: #ffffff; */
     margin: 20px auto;
     padding: 10px;
     text-align: center;
@@ -157,10 +157,9 @@ select:focus{
     margin: 10px auto;
     text-align: center  ;
 }
-/* job list */
 #jobs{
     max-width: 1140px;
-     margin: 30px auto;
+    margin: 30px auto; 
  }
 .job-inner{
     padding: 20px;
@@ -228,8 +227,6 @@ select:focus{
     color: #000000;
 
 }
-
-/*  */
 
 @media (max-width:425px)
 {
