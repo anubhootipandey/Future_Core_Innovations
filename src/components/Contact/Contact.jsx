@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faEnvelope, faPhone, faHeadphones, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import './Contact.css'; 
 import contactImg from "../media/contact-img.jpg";
 
@@ -18,17 +20,21 @@ const Contact = () => {
           <div className="col-md-7 w-full lg:w-7/12">
             <form id="contact-form" action="#" method="post">
               <div className="grid-form">
-                <div className="form-group">
+                <div className="form-group input-with-icon">
                   <input type="text" name="name" placeholder="Your Name" required />
+                  <FontAwesomeIcon icon={faUser} className="icon" />
                 </div>
-                <div className="form-group">
+                <div className="form-group input-with-icon">
                   <input type="email" name="email" placeholder="Email Address" required />
+                  <FontAwesomeIcon icon={faEnvelope} className="icon" />
                 </div>
-                <div className="form-group">
+                <div className="form-group input-with-icon">
                   <input type="tel" name="phone" placeholder="Phone" />
+                  <FontAwesomeIcon icon={faPhone} className="icon" />
                 </div>
-                <div className="form-group">
+                <div className="form-group input-with-icon">
                   <input type="text" name="subject" placeholder="Subject" required />
+                  <FontAwesomeIcon icon={faUser} className="icon" />
                 </div>
               </div>
               <div className="form-group textarea">
@@ -47,23 +53,32 @@ const Contact = () => {
           <div className="contact-heading">Contact information</div>
           <div className="contact-parts">
             <div className="contact-content">
+            <FontAwesomeIcon icon={faHeadphones} className="contact-icon" />
+              <div className="co-cont">
               <h2>Make a Call</h2>
               <h6>Let's talk with our experts</h6>
               <p>+1(215)268-8872, Mon - Fri</p>
+              </div>
             </div>
           </div>
           <div className="contact-parts">
             <div className="contact-content">
+            <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
+              <div className="co-cont">
               <h2>Send a Mail</h2>
               <h6>Don't hesitate to mail</h6>
               <p>help@futurecoreinnovations.tech</p>
+              </div>
             </div>
           </div>
           <div className="contact-parts">
             <div className="contact-content">
+            <FontAwesomeIcon icon={faPaperPlane} className="contact-icon" />
+              <div className="co-cont">
               <h2>Location</h2>
               <h6>Visit to explore the world</h6>
               <p>New Delhi, India</p>
+              </div>
             </div>
           </div>
         </div>
