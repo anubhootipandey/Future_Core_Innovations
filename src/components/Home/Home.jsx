@@ -181,8 +181,8 @@ const Home = () => {
   return (
     <div className="bg-gray-100">
 <div className="bg-gray-100">
-  <div id="main" className="bg-center bg-cover bg-gradient-to-b from-[#061443] to-[#171717]/90">
-    <div id="hero" className="flex flex-col lg:flex-row justify-around items-center h-auto lg:h-[840px] mx-auto max-w-[1100px] p-4">
+  <div id="main" className="main-container">
+    <div id="hero" className="flex flex-col lg:flex-row-reverse justify-around items-center h-auto lg:h-[840px] mx-auto max-w-[1100px] p-4">
       <div className="content md:order-1 p-5 lg:p-10">
         <h6 className="text-gray-300 mb-1">Future Core Innovations.</h6>
         <h1 className="text-white text-4xl font-bold mb-10">Innovating <br /> Tomorrow, Today</h1>
@@ -200,44 +200,49 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="box-con flex flex-col lg:flex-wrap md:order-2 justify-center lg:justify-evenly items-center">
-        <div className="box-con-inner lg:ml-[-180px] mt-10 lg:mt-[200px] bg-white w-[170px] p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
-          <div className="flex space-x-1">
-            <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
-            <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
-            <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
-          </div>
-          <div>
-            <h4 className="text-xl font-bold mt-2 mb-1">Android Apps Development</h4>
-            <p className="text-sm">"At first, the purpose of Android was thought of as a mobile OS."</p>
-          </div>
-        </div>
-        <div className="box-con-inner mt-10 lg:mt-0 bg-white p-5 lg:ml-[-65px] w-[250px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
-          <div className="flex space-x-1">
-            <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
-            <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
-            <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
-          </div>
-          <div>
-            <h4 className="text-xl font-bold mt-2 mb-1">Cyber Security Services</h4>
-            <p className="text-sm">"Blocking malware and spam, vulnerability scanning, intrusion detection, firewalls,"</p>
+      <div className="box-con-container flex flex-col lg:flex-row lg:items-start lg:space-x-4">
+        <div className="box-con-single lg:w-1/3">
+          <div className="box-con-inner bg-white w-full p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+            <div className="flex space-x-1">
+              <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
+              <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
+              <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
+            </div>
+            <div>
+              <h4 className="text-xl font-bold mt-2 mb-1">Android Apps Development</h4>
+              <p className="text-sm">"At first, the purpose of Android was thought of as a mobile OS."</p>
+            </div>
           </div>
         </div>
-        <div className="box-con-inner mt-10 lg:mt-[-60px] bg-white p-5 w-[250px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
-          <div className="flex space-x-1">
-            <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
-            <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
-            <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
+        <div className="box-con-multiple lg:w-2/3 flex flex-col space-y-4">
+          <div className="box-con-inner bg-white p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+            <div className="flex space-x-1">
+              <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
+              <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
+              <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
+            </div>
+            <div>
+              <h4 className="text-xl font-bold mt-2 mb-1">Cyber Security Services</h4>
+              <p className="text-sm">"Blocking malware and spam, vulnerability scanning, intrusion detection, firewalls,"</p>
+            </div>
           </div>
-          <div>
-            <h4 className="text-xl font-bold mt-2 mb-1">Design & Development</h4>
-            <p className="text-sm">"The process of creating software applications and systems by combining design and development activities"</p>
+          <div className="box-con-inner bg-white p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+            <div className="flex space-x-1">
+              <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
+              <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
+              <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
+            </div>
+            <div>
+              <h4 className="text-xl font-bold mt-2 mb-1">Design & Development</h4>
+              <p className="text-sm">"The process of creating software applications and systems by combining design and development activities"</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
 <div className="text-center my-5 hero-down-btn">

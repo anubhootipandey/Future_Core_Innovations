@@ -25,6 +25,9 @@
   padding: 0.5rem 1rem;
   text-align: center;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .contact-form-container .send-msg {
@@ -206,3 +209,33 @@ button:hover {
   cursor: pointer;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.col-md-5, .col-md-7 {
+  flex: 1; 
+}
+
+.col-md-5 {
+  order: 1; 
+}
+
+.col-md-7 {
+  order: 2; 
+}
+
+@media (max-width: 1024px) {
+  .row {
+    flex-direction: column; 
+  }
+  
+  .col-md-5 {
+    order: 1; 
+  }
+  
+  .col-md-7 {
+    order: 2; 
+  }
+}
