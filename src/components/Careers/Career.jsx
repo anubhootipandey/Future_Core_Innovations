@@ -5,9 +5,9 @@ import { faMagnifyingGlass, faCaretDown } from '@fortawesome/free-solid-svg-icon
 
 const Career = () => {
   return (
-    <>
-      <div id="mail">
-        <div>
+    <div className='main bg-gray-100'>
+      <div>
+        <div id="mail">
           <h4>Career at Future Core Innovations!</h4>
           <p>Mail your resume at <a href="mailto:hr.futurecore@outlook.com">hr.futurecore@outlook.com</a></p>
         </div>
@@ -119,8 +119,8 @@ const Career = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default Career;

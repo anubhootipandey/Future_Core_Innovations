@@ -1,12 +1,17 @@
+.main{
+    margin-top: -20px;
+}
+
 #mail{
-    text-align: center  ;
+    text-align: center;
 }
 #mail p{
-    font-size: 15px;
+    font-size: 13px;
     color: #696969;
 }
 #mail h4{
     font-weight: 600;
+    font-size: 1.3rem;
 }
 #mail a{
     text-decoration: none;
@@ -14,14 +19,14 @@
 }
 #careers , #mail{
     max-width: 1140px;
-    margin: 20px auto;
+    margin: 40px;
     border-radius: 10px;
     background-color: white;
     padding: 20px;
 }
 
 #careers h2{
-    font-size: 1.6  rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: #03103D;
 }
@@ -31,8 +36,8 @@
 .option-filter .job-in
 {
     position: relative;
-    background-color: rgb(234, 234, 234)     ;
-    margin:30px  20px;
+    background-color: rgb(234, 234, 234);
+    margin: 30px 20px;
     border-radius: 5px;
 }
 .option-filter .job-in i{
@@ -161,14 +166,15 @@ select:focus{
     max-width: 1140px;
     margin: 30px auto; 
  }
+
 .job-inner{
-    padding: 20px;
+    padding: 30px;
     background-color: white;
-    margin: 10px 0px;
+    margin: 20px 0px;
     border-radius: 5px;
     box-shadow: 0 8px 46px 0 rgba(3, 15, 39, .04);
-
 }
+
 .job-inner h2{
     color:#ff5b2e;
     font-size: 1.3rem;
@@ -180,7 +186,8 @@ select:focus{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px 0px;
+    margin: 20px 0px;
+    gap: 70px;
 }
 
 .job-d p{
