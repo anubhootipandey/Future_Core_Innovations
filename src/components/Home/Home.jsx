@@ -202,28 +202,28 @@ const Home = () => {
       </div>
       <div className="box-con-container flex flex-col lg:flex-row lg:items-start lg:space-x-4">
         <div className="box-con-single lg:w-1/3">
-          <div className="box-con-inner bg-white w-full p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+          <div className="box-con-inner bg-white w-full md:w-[160px] md:ml-[-30px] p-5 mt-[50px] rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
             <div className="flex space-x-1">
               <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
               <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
               <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
             </div>
             <div>
-              <h4 className="text-xl font-bold mt-2 mb-1">Android Apps Development</h4>
-              <p className="text-sm">"At first, the purpose of Android was thought of as a mobile OS."</p>
+              <h4 className="text-[17px] font-bold mt-2 mb-1">Android Apps Development</h4>
+              <p className="text-[13px]">"At first, the purpose of Android was thought of as a mobile OS."</p>
             </div>
           </div>
         </div>
         <div className="box-con-multiple lg:w-2/3 flex flex-col space-y-4">
-          <div className="box-con-inner bg-white p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
+          <div className="box-con-inner bg-white p-7 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
             <div className="flex space-x-1">
               <FontAwesomeIcon icon={faCircle} className="text-red-500 text-[0.8rem]" />
               <FontAwesomeIcon icon={faCircle} className="text-yellow-400 text-[0.8rem]" />
               <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
             </div>
             <div>
-              <h4 className="text-xl font-bold mt-2 mb-1">Cyber Security Services</h4>
-              <p className="text-sm">"Blocking malware and spam, vulnerability scanning, intrusion detection, firewalls,"</p>
+              <h4 className="text-[17px] font-bold mt-2 mb-1">Cyber Security Services</h4>
+              <p className="text-[13px]">"Blocking malware and spam, vulnerability scanning, intrusion detection, firewalls,"</p>
             </div>
           </div>
           <div className="box-con-inner bg-white p-5 rounded-lg shadow-md hover:translate-y-[-10px] transition-transform duration-100">
@@ -233,8 +233,8 @@ const Home = () => {
               <FontAwesomeIcon icon={faCircle} className="text-green-400 text-[0.8rem]" />
             </div>
             <div>
-              <h4 className="text-xl font-bold mt-2 mb-1">Design & Development</h4>
-              <p className="text-sm">"The process of creating software applications and systems by combining design and development activities"</p>
+              <h4 className="text-[17px] font-bold mt-2 mb-1">Design & Development</h4>
+              <p className="text-[13px]">"The process of creating software applications and systems by combining design and development activities"</p>
             </div>
           </div>
         </div>
@@ -355,7 +355,7 @@ const Home = () => {
 <div className="bg-[#e1f3f4] p-[50px_60px] rounded-[20px] max-w-[1140px] mx-auto my-[80px_0_10px_0]">
   <div className="relative">
     <p className="text-[1rem] font-semibold m-0">SERVICES WE PROVIDE</p>
-    <h1 className="text-[3.5rem] font-bold  text-[#1d3557]">
+    <h1 className="text-[3.5rem] font-bold text-[#1d3557]">
       Best Quality <br /> Service for your <br /> Company.
     </h1>
     <div className="absolute right-0 top-0 mt-[10px]">
@@ -374,13 +374,13 @@ const Home = () => {
   <div className="my-[90px] flex flex-wrap mx-auto overflow-hidden">
     {services.slice(visibleIndex, visibleIndex + (window.innerWidth < 640 ? 1 : 3)).map((service, index) => (
       <div
-        className="bg-white m-[10px] p-[20px] w-full sm:w-[300px] h-[370px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-200 hover:translate-y-[10px]"
+        className={`bg-white m-[10px] p-[20px] w-full sm:w-[300px] h-[370px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-200 hover:translate-y-[10px] ${index === 1 ? 'mt-[70px]' : ''}`}
         key={index}
       >
         <h4 className="text-[1.2rem] font-semibold">{service.title}</h4>
         <div className="flex flex-row">
           {service.tags.map((tag, i) => (
-            <span className="mr-[20px] text-[12px] font-semibold" key={i}>
+            <span className="m-[10px_20px_20px_3px] text-[12px] font-semibold" key={i}>
               {tag}
             </span>
           ))}
@@ -390,7 +390,7 @@ const Home = () => {
             <img
               src={src}
               alt={`${service.title} icon ${i}`}
-              className="h-[40px] mr-[30px]"
+              className="h-[40px] m-[10px_20px_20px_3px]"
               key={i}
             />
           ))}
@@ -398,8 +398,8 @@ const Home = () => {
         <p className="text-[#6c6b6b] text-[12px] my-[10px] font-normal">
           {service.description}
         </p>
-        <button className="bg-[#03103D] border-[#03103D] border-2 rounded-[5px] p-[5px_20px] text-[14px] font-normal text-white cursor-pointer transition-all duration-200">
-          <Link to="/service">Read more...</Link>
+        <button className="bg-[#03103D] mt-3 border-[#03103D] border-2 rounded-[5px] p-[5px_20px] text-[14px] font-normal text-white cursor-pointer transition-all duration-200">
+          <Link to="/service">Read more.</Link>
         </button>
       </div>
     ))}
