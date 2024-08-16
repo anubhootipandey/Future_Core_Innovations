@@ -414,7 +414,7 @@ const Home = () => {
         Our Working <br /> Process
       </h1>
 
-      <div className="flex flex-wrap items-stretch justify-center mt-[50px]">
+      <div className="flex flex-wrap justify-center mt-[50px]">
         {[
           { step: 'Meet', description: 'With Client' },
           { step: 'Think', description: 'Brainstorming' },

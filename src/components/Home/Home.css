@@ -56,7 +56,11 @@
       width: calc(100% - 200px); 
     }
   }
+
   
+
+
+/*   
 @keyframes slideInFromLeft {
     from {
       transform: translateX(-100%);
@@ -149,4 +153,4 @@
   .accordion-item:nth-child(4) {
     animation-delay: 0.8s;
   }
-  
+   */
