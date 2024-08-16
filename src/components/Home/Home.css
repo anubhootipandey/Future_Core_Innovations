@@ -58,99 +58,74 @@
   }
 
   
-
-
-/*   
-@keyframes slideInFromLeft {
-    from {
+  @keyframes slideIn {
+    0% {
       transform: translateX(-100%);
       opacity: 0;
     }
-    to {
+    100% {
       transform: translateX(0);
       opacity: 1;
     }
   }
   
-  .quantity {
-    animation: slideInFromLeft 0.6s ease-out forwards; 
+  .animate-slideIn {
+    animation: slideIn 0.5s ease-out forwards;
   }
   
-  .quantity.q1 {
-    animation-delay: 0s;
-  }
-  .quantity.q2 {
-    animation-delay: 0.2s;
-  }
-  .quantity.q3 {
-    animation-delay: 0.4s;
-  }
-  .quantity.q4 {
-    animation-delay: 0.6s;
-  }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
   
-  .animated-img {
-    animation: slideInFromLeft 0.6s ease-out forwards; 
-  }
-
-@keyframes dropFromTop {
+  @keyframes dropFromTop {
     from {
-      transform: translateY(-50px); 
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .drop-from-top {
+    animation: dropFromTop 0.3s ease-out forwards;
+  }
+  
+  @keyframes slideFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-from-left {
+    animation: slideFromLeft 0.5s ease-out forwards;
+  }
+  
+  @keyframes drop {
+    from {
+      transform: translateY(-50px);
       opacity: 0;
     }
     to {
-      transform: translateY(0); 
+      transform: translateY(0);
       opacity: 1;
     }
   }
   
-  .card {
-    animation: dropFromTop 0.5s ease-out forwards; 
-    opacity: 0; 
+  .faq-item {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
   
-  .card:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  .card:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  .card:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  .card:nth-child(4) {
-    animation-delay: 0.8s;
+  .faq-item.drop {
+    animation: drop 0.5s forwards;
   }
   
-
-@keyframes dropFromTop {
-    from {
-      transform: translateY(-20px); 
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0); 
-      opacity: 1;
-    }
-  }
-  
-  
-  .accordion-item {
-    animation: dropFromTop 0.5s ease-out forwards; 
-    opacity: 0; 
-  }
-  
-  
-  .accordion-item:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  .accordion-item:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  .accordion-item:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  .accordion-item:nth-child(4) {
-    animation-delay: 0.8s;
-  }
-   */

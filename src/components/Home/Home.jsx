@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faChevronRight, faChevronLeft, faChevronDown } from "@fortawesome/free-solid-svg-icons";
@@ -19,6 +19,113 @@ const Home = () => {
   const [visibleIndex, setVisibleIndex] = useState(0);
     const [openIndex, setOpenIndex] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const containerRef = useRef(null);
+    const workRef = useRef(null);
+    const sectionRef = useRef(null);
+    const faqRef = useRef(null);
+    
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const elements = entry.target.querySelectorAll(".quantity");
+              elements.forEach((el, index) => {
+                el.classList.add("animate-slideIn");
+                el.classList.add(`delay-${index + 1}`);
+              });
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+  
+      if (containerRef.current) {
+        observer.observe(containerRef.current);
+      }
+  
+      return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+      const work = workRef.current;
+      const cards = work.querySelectorAll('.card');
+  
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            cards.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add('drop-from-top');
+              }, index * 200); 
+            });
+            observer.disconnect(); 
+          }
+        },
+        { threshold: 0.3 } 
+      );
+  
+      if (work) {
+        observer.observe(work);
+      }
+  
+      return () => {
+        if (work) {
+          observer.unobserve(work);
+        }
+      };
+    }, []);
+
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const imgElement = section.querySelector('.animated-img');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          imgElement.classList.add('slide-from-left');
+          observer.disconnect(); 
+        }
+      },
+      { threshold: 0.3 } 
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const faqItems = faqRef.current.querySelectorAll('.faq-item');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            faqItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add('drop');
+              }, index * 100); 
+            });
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(faqRef.current);
+  }, []);
 
     const handleIndicatorClick = (index) => {
       setCurrentIndex(index);
@@ -180,7 +287,7 @@ const Home = () => {
 
   return (
     <div className="bg-gray-100">
-<div className="bg-gray-100">
+<div>
   <div id="main" className="main-container">
     <div id="hero" className="flex flex-col lg:flex-row-reverse justify-around items-center h-auto lg:h-[840px] mx-auto max-w-[1100px] p-4">
       <div className="content md:order-1 p-5 lg:p-10">
@@ -250,7 +357,7 @@ const Home = () => {
   <FontAwesomeIcon icon={faChevronDown} className="m-4 h-6" />
 </div>
 
-<div id="container" className="max-w-5xl mx-auto my-30 px-4">
+<div id="container" className="max-w-5xl mx-auto my-30 px-4" ref={containerRef}>
       <div className="text text-center mb-10">
         <p className="font-semibold">How Can We Help You</p>
         <h1 className="text-center text-4xl font-extrabold text-gray-800 py-4">
@@ -315,40 +422,40 @@ const Home = () => {
 
 {/* about section */}
 
-<div id="about" className="max-w-[1140px] mx-auto my-12 p-5">
-  <div className="flex flex-col lg:flex-row items-center">
-    <div className="lg:w-1/2 w-full">
-      <div className="p-5 m-2">
-        <img
-          src={aboutBgImg}
-          alt="About Company"
-          className="rounded-lg m-2 transition-transform duration-300 transform hover:scale-110 animated-img"
-        />
-      </div>
-    </div>
+<div id="about" ref={sectionRef} className="max-w-[1140px] mx-auto my-12 p-5">
+      <div className="flex flex-col lg:flex-row items-center">
+        <div className="lg:w-1/2 w-full">
+          <div className="p-5 m-2">
+            <img
+              src={aboutBgImg}
+              alt="About Company"
+              className="rounded-lg m-2 transition-transform duration-300 transform hover:scale-110 animated-img opacity-0"
+            />
+          </div>
+        </div>
 
-    <div className="lg:w-1/2 w-full">
-      <div className="p-5 m-2">
-        <h4 className="text-base uppercase font-bold my-7">About Company</h4>
-        <p className="my-2 text-sm text-[#444444]">
-          At Future Core Innovations, our mission is to push the boundaries of what's possible through innovative technology solutions. We are committed to fostering a culture of creativity and excellence, ensuring that we not only meet but exceed our clients' expectations. Our goal is to drive progress and transform industries, creating a better, more connected world for everyone.
-        </p>
-        <p className="my-2 text-sm text-[#444444]">
-          At Future Core Innovations, we take a holistic approach to innovation. We understand that true progress requires more than just cutting-edge technology; it demands a deep understanding of our client's needs and a collaborative spirit.
-        </p>
-        <h2 className="my-7 font-bold">Let's Start a New Project Together</h2>
-        <button className="my-2 bg-transparent border-none">
-          <Link
-            to="/about"
-            className="bg-[#03103D] text-white py-2 px-10 rounded-md border-2 border-[#03103D] text-sm transition-colors duration-200 hover:bg-white hover:text-black"
-          >
-            About Us
-          </Link>
-        </button>
+        <div className="lg:w-1/2 w-full">
+          <div className="p-5 m-2">
+            <h4 className="text-base uppercase font-bold my-7">About Company</h4>
+            <p className="my-2 text-sm text-[#444444]">
+              At Future Core Innovations, our mission is to push the boundaries of what's possible through innovative technology solutions. We are committed to fostering a culture of creativity and excellence, ensuring that we not only meet but exceed our clients' expectations. Our goal is to drive progress and transform industries, creating a better, more connected world for everyone.
+            </p>
+            <p className="my-2 text-sm text-[#444444]">
+              At Future Core Innovations, we take a holistic approach to innovation. We understand that true progress requires more than just cutting-edge technology; it demands a deep understanding of our client's needs and a collaborative spirit.
+            </p>
+            <h2 className="my-7 font-bold">Let's Start a New Project Together</h2>
+            <button className="my-2 bg-transparent border-none">
+              <Link
+                to="/about"
+                className="bg-[#03103D] text-white py-2 px-10 rounded-md border-2 border-[#03103D] text-sm transition-colors duration-200 hover:bg-white hover:text-black"
+              >
+                About Us
+              </Link>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
 
 {/* service section */}
@@ -409,7 +516,7 @@ const Home = () => {
 
 
 {/* work  section */}
-<div className="work-section max-w-[1140px] mx-auto my-[40px] p-[10px] text-center">
+<div ref={workRef} className="work-section max-w-[1140px] mx-auto my-[40px] p-[10px] text-center">
       <h1 className="text-[#1d3557] my-[10px] text-[3.3rem] font-bold">
         Our Working <br /> Process
       </h1>
@@ -421,7 +528,10 @@ const Home = () => {
           { step: 'Plan', description: 'Make the Solutions' },
           { step: 'Execute', description: 'Deliver' }
         ].map((item, index) => (
-          <div className="p-[20px] flex-[1_1_200px] bg-white m-[10px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-300 hover:bg-[#03103D] hover:translate-y-[-10px] card" key={index}>
+          <div
+            className="p-[20px] flex-[1_1_200px] bg-white m-[10px] rounded-[10px] shadow-[0_8px_46px_0_rgba(3,15,39,0.04)] transition-all duration-300 hover:bg-[#03103D] hover:translate-y-[-10px] card opacity-0"
+            key={index}
+          >
             <h4 className="text-[2rem] font-bold text-[#eb3b5a]">{item.step}</h4>
             <p className="text-[#6c6b6b] hover:text-white font-semibold">{item.description}</p>
           </div>
@@ -500,7 +610,11 @@ const Home = () => {
 </div>
 
 {/* faq section */}
-<div id="faq" className="max-w-[1140px] mx-auto my-[10px] mb-[40px] p-[10px]">
+<div
+      id="faq"
+      ref={faqRef}
+      className="max-w-[1140px] mx-auto my-[10px] mb-[40px] p-[10px]"
+    >
       <h1 className="text-center mt-[60px] text-[3rem] text-[#1d3557] font-bold">
         Frequently Asked Questions
       </h1>
@@ -510,10 +624,15 @@ const Home = () => {
           <div className="p-[20px]">
             <div className="accordion">
               {faqData.map((faq, index) => (
-                <div key={index} className="accordion-item my-[15px] border-none rounded-[10px]">
+                <div
+                  key={index}
+                  className="accordion-item faq-item my-[15px] border-none rounded-[10px]"
+                >
                   <button
                     className={`accordion-button bg-white hover:shadow-md w-full lg:w-[600px] shadow-sm p-3 flex justify-between items-center rounded-[10px] ${
-                      openIndex === index ? 'text-white bg-[#1F3170] shadow-inner' : ''
+                      openIndex === index
+                        ? 'text-white bg-[#1F3170] shadow-inner'
+                        : ''
                     }`}
                     onClick={() => toggleAccordion(index)}
                   >
@@ -525,7 +644,11 @@ const Home = () => {
                       }`}
                     />
                   </button>
-                  <div className={`accordion-content rounded-sm bg-white p-6 ${openIndex === index ? 'block' : 'hidden'}`}>
+                  <div
+                    className={`accordion-content rounded-sm bg-white p-6 ${
+                      openIndex === index ? 'block' : 'hidden'
+                    }`}
+                  >
                     <p className="text-left text-[0.9rem]">{faq.answer}</p>
                   </div>
                 </div>
