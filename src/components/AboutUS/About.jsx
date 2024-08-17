@@ -1,5 +1,8 @@
 import React from 'react'
 import image1 from "../images/about-new.png"
+import image2 from "../images/worldwide.png"
+import image3 from "../images/high result.png"
+import image4 from "../images/incentive result.png"
 import './About.css'
 
 const About = () => {
@@ -25,7 +28,7 @@ const About = () => {
         <div className="choose-content">
           <div className="content-ab">
             <div className="content-img">
-              <img src="images/worldwide.png" alt="" />
+              <img src={image2} alt="" />
             </div>
             <div className="heading">Worldwide Experience</div>
             <hr />
@@ -33,7 +36,7 @@ const About = () => {
           </div>
           <div className="content-ab">
             <div className="content-img">
-              <img src="images/incentive result.png" alt="" />
+              <img src={image3} alt="" />
             </div>
             <div className="heading">Incentive for Results</div>
             <hr />
@@ -41,7 +44,7 @@ const About = () => {
           </div>
           <div className="content-ab">
             <div className="content-img">
-              <img src="images/high result.png" alt="" />
+              <img src={image4} alt="" />
             </div>
             <div className="heading">High-Quality Results</div>
             <hr />
