@@ -52,7 +52,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
       <hr />
       <div className="numbers">
         <div className="figure">
